@@ -13,7 +13,7 @@ const initialHeight = chatInput.scrollHeight;
 
 
 const loadDataFromLocalStorage = () =>{
-    const themeColor = localStorage.getItem("theme-color");
+    const themeColor = localStorage.getItem("theme-color");  // this line is useful for when opened second time
     document.body.classList.toggle("light-mode",themeColor === "light_mode");
     localStorage.setItem("theme-color",themeButton.innerText);
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
